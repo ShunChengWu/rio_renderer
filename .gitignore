@@ -1,0 +1,4 @@
+external/
+.idea/
+bin
+cmake-build-*
