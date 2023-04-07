@@ -1,0 +1,19 @@
+cmake_minimum_required(VERSION 3.14) 
+
+project(assimp-download C CXX)
+include(ExternalProject)
+
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+ExternalProject_Add(
+        assimp_external
+        GIT_REPOSITORY https://github.com/assimp/assimp.git
+        GIT_TAG v4.1.0
+        UPDATE_COMMAND ""
+        PATCH_COMMAND ""
+        BUILD_COMMAND make -j8
+        CMAKE_GENERATOR ${gen}
+        CMAKE_ARGS
+        -DCMAKE_INSTALL_PREFIX:PATH=${PROJECT_SOURCE_DIR}/external/
+        )
