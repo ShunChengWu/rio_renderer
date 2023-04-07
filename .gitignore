@@ -2,3 +2,4 @@ external/
 .idea/
 bin
 cmake-build-*
+build/
