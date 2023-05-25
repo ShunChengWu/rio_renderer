@@ -3,7 +3,7 @@
 ###################
 find_package(OpenCV QUIET)
 OPTION(WITH_OpenCV "Build with OpenCV support?" ${OpenCV_FOUND})
-
+MESSAGE("OpenCV_FOUND: " ${OpenCV_FOUND})
 IF(WITH_OpenCV)
   IF(NOT OpenCV_FOUND)
       INCLUDE(ConfigureTimeDependency)
