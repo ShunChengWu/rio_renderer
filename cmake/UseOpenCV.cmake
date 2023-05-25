@@ -1,11 +1,15 @@
 ###################
 # UseOpenCV.cmake #
 ###################
-find_package(OpenCV QUIET)
+find_package(OpenCV QUIET
+    PATHS
+    "${PROJECT_SOURCE_DIR}/external/share/opencv"
+    )
 OPTION(WITH_OpenCV "Build with OpenCV support?" ${OpenCV_FOUND})
 MESSAGE("OpenCV_FOUND: " ${OpenCV_FOUND})
 IF(WITH_OpenCV)
   IF(NOT OpenCV_FOUND)
+      MESSAGE("Trying to build OpenCV")
       INCLUDE(ConfigureTimeDependency)
       add_configure_time_dependency(OpenCV)
       find_package(OpenCV REQUIRED)

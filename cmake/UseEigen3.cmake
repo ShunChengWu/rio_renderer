@@ -6,6 +6,7 @@ find_package(Eigen3 3 QUIET
         PATHS
         "/usr/local/share/eigen3"
         "/usr/local/share/eigen3/cmake"
+        "${PROJECT_SOURCE_DIR}/external/share/eigen3/cmake"
         NO_DEFAULT_PATH)
 #set(CMAKE_FIND_DEBUG_MODE FALSE)
 MESSAGE("EIGEN3_INCLUDE_DIR: " ${EIGEN3_INCLUDE_DIR})

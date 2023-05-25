@@ -27,7 +27,7 @@ set(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake ${CMAKE_MODULE_PATH})
 include(CheckCXXCompilerFlag)
 # =============================== packages ===============================
 SET(WITH_ASSIMP TRUE)
-SET(WITH_OPENCV TRUE)
+SET(WITH_OpenCV TRUE)
 SET(WITH_EIGEN TRUE)
 SET(WITH_JSON TRUE)
 INCLUDE(UseEigen3)
